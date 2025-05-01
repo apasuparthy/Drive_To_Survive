@@ -1,0 +1,34 @@
+name: Web Scrape Data Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 16 * * 0'  # Optional: Runs every Sunday at 4:15 PM UTC
+
+env:
+    PG_USER: ${{ secrets.PG_USER }}
+    PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
+    PG_HOST: ${{ secrets.PG_HOST }}
+    PG_DB: ${{ secrets.PG_DB }}
+
+jobs:
+  extract_load_scrape:
+    name: Extract and Load from Web Scrape
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: ▶️ Run Web Scrape Script
+        run: |
+          python scripts/web_scrape_extract_load_raw.py
