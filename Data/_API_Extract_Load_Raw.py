@@ -22,8 +22,8 @@ engine = create_engine(conn_str)
 # %%
 # Step 1: Pull Qualifying Results from F1 API (2022)
 url = "https://ergast.com/api/f1/2022/qualifying.json?limit=1000"
-
-
+response = requests.get(url)
+data = response.json()
 # %%
 # Step 2: Navigate to Race results
 races = data['MRData']['RaceTable']['Races']
