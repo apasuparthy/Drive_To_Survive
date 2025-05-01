@@ -31,5 +31,5 @@ jobs:
 
       - name: ▶️ Run Web Scrape Extract + Load Script
         run: |
-          python scripts/f1_web_scrape_extract_load_raw.py
+          python _Web_Scrape_Extract_Load_Raw.py
 
