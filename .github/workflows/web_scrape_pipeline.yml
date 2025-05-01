@@ -1,23 +1,23 @@
-name: Web Scrape Data Pipeline
+name: Run F1 Web Scrape Extract and Load to Raw
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '15 16 * * 0'  # Optional: Runs every Sunday at 4:15 PM UTC
+    - cron: '15 16 * * 0'  # Runs every Sunday at 4:15 PM UTC
+  workflow_dispatch:
 
 env:
-    PG_USER: ${{ secrets.PG_USER }}
-    PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
-    PG_HOST: ${{ secrets.PG_HOST }}
-    PG_DB: ${{ secrets.PG_DB }}
+  PG_USER: ${{ secrets.PG_USER }}
+  PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
+  PG_HOST: ${{ secrets.PG_HOST }}
+  PG_DB: ${{ secrets.PG_DB }}
 
 jobs:
-  extract_load_scrape:
-    name: Extract and Load from Web Scrape
+  extract_load_raw:
+    name: Extract and Load F1 Web Scrape Data to Raw Schema
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout Code
+      - name: 📥 Check out Code
         uses: actions/checkout@v3
 
       - name: 🐍 Set up Python
@@ -25,10 +25,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 📦 Install Dependencies
+      - name: 📦 Install Python Dependencies
         run: |
           pip install -r requirements.txt
 
-      - name: ▶️ Run Web Scrape Script
+      - name: ▶️ Run Web Scrape Extract + Load Script
         run: |
-          python scripts/web_scrape_extract_load_raw.py
+          python scripts/f1_web_scrape_extract_load_raw.py
+
