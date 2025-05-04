@@ -31,4 +31,4 @@ jobs:
 
       - name: ▶️ Run API Extract + Load Script
         run: |
-          python Data/_Api_Extract_Load_Raw.py
+          python Notebooks/_Api_Extract_Load_Raw.py
