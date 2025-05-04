@@ -99,5 +99,3 @@ df_web_scrape.to_sql(
 )
 
 print("Web scrape CSV uploaded to PostgreSQL successfully.")
-
-
