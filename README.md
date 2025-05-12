@@ -39,11 +39,29 @@ In this project, I replicated that exact workflow. I extracted and modeled quali
 
 ## Data Pipelines
 
-### API ETL
-[API Pipeline](/Proposal/_API_Data_Pipeline.png)
+### ✨ Data Pipelines
 
-### Web Scrape ETL
-[Web Scrape Pipeline](/Proposal/_Web_Scrape_Data_Pipeline.png)
+#### 🚀 API ETL
+F1 race data (qualifying/results) was pulled from the [Ergast F1 API](https://f1api.dev), using a Python script to fetch, normalize, and load it into PostgreSQL tables. This enabled clean, structured querying of driver performance over time.
+
+**Pipeline:**
+```
+F1 API JSON → api_extract_load_raw.py → PostgreSQL Tables (qualifying_results_2022, race_results_2023, etc.)
+```
+
+**Diagram:** [API Pipeline](/Proposal/_API_Data_Pipeline.png)
+
+---
+
+#### 🖥️ Web Scrape ETL
+Reddit comments from r/formula1 were scraped using a JSON endpoint and a Python ETL script. After cleaning and matching mentions to driver names, the data was loaded into PostgreSQL for sentiment and volume analysis.
+
+**Pipeline:**
+```
+r/formula1 JSON → web_scrape_extract_load_raw.py → PostgreSQL Table (web_scrape_formula1)
+```
+
+**Diagram:** [Web Scrape Pipeline](/Proposal/_Web_Scrape_Data_Pipeline.png)
 
 ---
 
