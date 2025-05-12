@@ -49,8 +49,6 @@ F1 race data (qualifying/results) was pulled from the [Ergast F1 API](https://f1
 F1 API JSON → api_extract_load_raw.py → PostgreSQL Tables (qualifying_results_2022, race_results_2023, etc.)
 ```
 
-**Diagram:** [API Pipeline](/Proposal/_API_Data_Pipeline.png)
-
 ---
 
 #### Web Scrape ETL
@@ -60,8 +58,6 @@ Reddit comments from r/formula1 were scraped using a JSON endpoint and a Python 
 ```
 r/formula1 JSON → web_scrape_extract_load_raw.py → PostgreSQL Table (web_scrape_formula1)
 ```
-
-**Diagram:** [Web Scrape Pipeline](/Proposal/_Web_Scrape_Data_Pipeline.png)
 
 ---
 
