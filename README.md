@@ -65,11 +65,11 @@ r/formula1 JSON → web_scrape_extract_load_raw.py → PostgreSQL Table (web_scr
 
 | Notebook/Script | Purpose |
 |-----------------|---------|
-| [F1API_API_Extract_Load_Raw.ipynb](https://github.com/apasuparthy/Drive_To_Survive/blob/main/Notebooks/F1API_API_Extract_Load_Raw.ipynb) | Pull and clean F1 qualifying/race data |
+| [F1API_API_Extract_Load_Raw.ipynb](https://github.com/apasuparthy/Drive_To_Survive/blob/main/Notebooks/F1API_API_Extract_Load_Raw.ipynb) | Pull F1 qualifying/race data |
 | [F1API_API_SQL_Analysis.ipynb](https://github.com/apasuparthy/Drive_To_Survive/blob/main/Notebooks/F1API_API_SQL_Analysis.ipynb) | SQL queries for race trends |
-| [F1API_Api_Extract_Load_Raw.py](https://github.com/apasuparthy/Drive_To_Survive/blob/main/Notebooks/F1API_Api_Extract_Load_Raw.py) | Python ETL for F1 API |
+| [F1API_Api_Extract_Load_Raw.py](https://github.com/apasuparthy/Drive_To_Survive/blob/main/Notebooks/F1API_Api_Extract_Load_Raw.py) | Pull F1 qualifying/race data |
 | [Reddit_Web_Scrape_Extract_Load_Raw.ipynb](https://github.com/apasuparthy/Drive_To_Survive/blob/main/Notebooks/Reddit_Web_Scrape_Extract_Load_Raw.ipynb) | Extract Reddit posts/comments |
-| [Reddit_Web_Scrape_Extract_Load_Raw.py](https://github.com/apasuparthy/Drive_To_Survive/blob/main/Notebooks/Reddit_Web_Scrape_Extract_Load_Raw.py) | Web scrape automation |
+| [Reddit_Web_Scrape_Extract_Load_Raw.py](https://github.com/apasuparthy/Drive_To_Survive/blob/main/Notebooks/Reddit_Web_Scrape_Extract_Load_Raw.py) | Extract Reddit posts/comments |
 | [Reddit_Web_Scrape_SQL_Analysis.ipynb](https://github.com/apasuparthy/Drive_To_Survive/blob/main/Notebooks/Reddit_Web_Scrape_SQL_Analysis.ipynb) | SQL analysis: popularity vs performance |
 
 ---
